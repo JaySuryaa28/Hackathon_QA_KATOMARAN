@@ -1,0 +1,87 @@
+Test Case ID,Module,Requirement,Test Scenario,Test Objective,Preconditions,Test Data,Test Steps,Expected Result,Actual Result,Status,Priority,Severity,Remarks
+TC_SIGNUP_001,Sign Up,The application should prevent duplicate account creation using an already registered email address.,Verify that a user attempting to register with an existing email is redirected to the Sign In page after the verification email flow.,To verify that the application identifies an already registered email address and prevents duplicate account creation by redirecting the user to the Sign In page.,"1. The application is accessible.
+2. An account already exists with the email address used in this test.
+3. The account has already been verified through email.
+4. User is on the Landing Page.",First Name: NithiyaLast Name: ShreeMobile: 9876543210Email: existinguser@example.comPassword: Test@123,"1. Open the Tichi application in a supported browser.
+2. Verify that the Landing Page is displayed successfully.
+3. Click the Sign Up button.
+4. Verify that the registration page opens.
+5. Enter the First Name.6. Enter the Last Name.
+7. Enter the Mobile Number.
+8. Enter an email address that is already registered and verified.
+9. Enter a valid password.
+10. Enter the same password in the Confirm Password field.
+11. Accept the Terms and Conditions checkbox.
+12. Click the Create Account / Sign Up button.
+13. Observe the application's response after submission.
+14. If a verification email is triggered, open the email and click the verification link.
+15. Observe the page displayed after clicking the verification link.
+16. Verify whether the application redirects the user to the Sign In page instead of creating another account.
+17. Attempt to log in using the existing account credentials.
+18. Verify that login is successful using the original account.","1. The application should recognize that the email address already exists.
+2. A duplicate account must not be created.
+3. The user should receive an appropriate message such as ""This email is already registered. Please sign in.""
+4. If the verification link is opened again, the application should redirect the user to the Sign In page.
+5. The existing account should remain unchanged.
+6. The user should be able to log in successfully using the existing credentials.
+7. No duplicate user records should be created in the database.",To be filled during execution,Not Executed,High,Critical,Duplicate Registration / End-to-End Flow
+TC_SIGNUP_002,Sign Up,The application should successfully register a new user account using a unique email address and send a verification email.,Verify registration with a brand-new email address.,"To verify that a new user can successfully create an account, receive a verification email, verify the account, and access the Login page.","1. The application is accessible.
+2. User is on the Landing Page.
+3. The email address has never been registered before.
+4. Internet connection is available.",First Name: NithiyaLast Name: ShreeMobile: 9876543210Email: newuser123@example.comPassword: Test@123,"1. Open the Tichi application.
+2. Click the Sign Up button.
+3. Verify that the registration page opens successfully.
+4. Enter the First Name.
+5. Enter the Last Name.
+6. Enter the Mobile Number.
+7. Enter a new email address that is not registered.
+8. Enter a valid password.
+9. Enter the same password in the Confirm Password field.
+10. Accept the Terms and Conditions checkbox.
+11. Click the Sign Up button.
+12. Verify that a verification email is sent.
+13. Open the email inbox.
+14. Click the verification link.
+15. Verify that the email is successfully verified.
+16. Verify that the application redirects the user to the Login page.
+17. Log in using the newly created account.","1. Account should be created successfully.
+2. Verification email should be sent.
+3. Verification link should activate the account.
+4. User should be redirected to the Login page after verification.
+5. Login should succeed with the newly created credentials.",To be filled during execution,Not Executed,High,Critical,Positive End-to-End Flow
+TC_SIGNUP_003,Sign Up,The application should prevent repeated verification of an already verified account.,Verify behavior when the verification link is clicked more than once.,To verify that clicking the verification link multiple times does not create errors or duplicate verification requests.,"1. User account has already been registered.
+2. Verification email has been received.
+3. Email has already been verified once.",Existing Verified Account,"1. Register a new account.
+2. Receive the verification email.
+3. Click the verification link once.
+4. Verify that the account is activated.
+5. Open the same email again.
+6. Click the verification link a second time.
+7. Observe the application's response.
+8. Verify that no duplicate verification occurs.","1. The application should identify that the email has already been verified.
+2. A message such as ""Email already verified."" should be displayed.
+3. Alternatively, the user should be redirected to the Login page.
+4. No application error should occur.
+5. No duplicate account should be created.",To be filled during execution,Not Executed,Medium,Major,Email Verification
+TC_SIGNUP_004,Sign Up,The application should block duplicate registration using an already verified email address.,Verify duplicate registration with an already verified account.,To verify that verified users cannot register again using the same email address.,"1. User account already exists.
+2. Email verification has been completed.",Existing Verified Email,"1. Open the application.
+2. Navigate to the Sign Up page.
+3. Enter valid user information.
+4. Enter an email address that already exists and has been verified.
+5. Enter Password and Confirm Password.6. Accept the Terms and Conditions.
+7. Click the Sign Up button.
+8. Observe the application's response.","1. Duplicate registration should not be allowed.
+2. Appropriate message such as ""Account already exists. Please Sign In."" should be displayed.
+3. User should be redirected to the Login page or provided with a Sign In option.
+4. No duplicate account should be created.",To be filled during execution,Not Executed,High,Critical,Duplicate Registration
+TC_SIGNUP_005,Sign Up,The application should handle registration attempts using an email address that is already registered but not yet verified.,Verify registration with an email address pending verification.,To verify that the application properly handles accounts awaiting email verification.,"1. User has already initiated registration.
+2. Email verification has not yet been completed.",Existing Unverified Email,"1. Register a new account without verifying the email.
+2. Return to the Sign Up page.
+3. Enter the same email address.
+4. Fill all mandatory fields.
+5. Click the Sign Up button.
+6. Observe the system behavior.
+7. Check the email inbox for any new verification email.","1. The application should detect that the account is pending verification.
+2. It should either resend the verification email or display a message indicating that the account is awaiting verification.
+3. No duplicate account should be created.
+4. User should be guided to complete verification before logging in.",To be filled during execution,Not Executed,High,Major,Email Verification Pending
