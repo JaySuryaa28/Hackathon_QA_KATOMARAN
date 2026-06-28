@@ -1,0 +1,18 @@
+{
+    "validUser": {
+        "email": "meenatchir77@gmail.com",
+        "password": "Welcome@1"
+    },
+
+    "invalidUser": {
+        "email": "meenatchir77@gmail.com",
+        "password": "Wrong@123"
+    },
+
+    "newUser": {
+        "firstName": "Jay",
+        "email": "jay123@gmail.com",
+        "password": "Welcome@1",
+        "confirmPassword": "Welcome@1"
+    }
+}
