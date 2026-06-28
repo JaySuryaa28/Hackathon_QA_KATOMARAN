@@ -160,6 +160,7 @@ Login_Report.json
 
 # Sample Execution Report
 
+<img width="1439" height="861" alt="Screenshot 2026-06-28 at 11 13 33 AM" src="https://github.com/user-attachments/assets/d87798c9-a80a-4b55-aff7-03052e96baa8" />
 
 # Test Coverage
 
